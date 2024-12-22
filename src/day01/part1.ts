@@ -9,8 +9,17 @@ export function part1(): number {
   // Process input
   const lines = input.trim().split('\n');
 
-  const pairs = lines.map((line) => line.split(" "))
+  const list1: number[] = []
+  const list2: number[] = []
+  const pairs = lines.map((line) => line.split("   "))
   console.log("pairs is: ", pairs)
+  for (let i = 0; i < pairs.length; i++) {
+    list1.push(Number(pairs[0]))
+    list2.push(Number(pairs[1]))
+  }
+  
+
+
 
   return lines.reduce((sum, line) => sum + Number(line), 0);
 }

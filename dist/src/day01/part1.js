@@ -12,7 +12,12 @@ function part1() {
     const input = (0, fs_1.readFileSync)(inputPath, 'utf-8');
     // Process input
     const lines = input.trim().split('\n');
-    const pairs = lines.map((line) => line.split(" "));
+    const list1 = [];
+    const list2 = [];
+    const pairs = lines.map((line) => line.split("   "));
     console.log("pairs is: ", pairs);
+    for (let i = 0; i < pairs.length; i++) {
+        // list1.push[]
+    }
     return lines.reduce((sum, line) => sum + Number(line), 0);
 }
