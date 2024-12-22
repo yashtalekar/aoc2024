@@ -1,0 +1,20 @@
+{
+  "name": "advent-of-code-cli",
+  "version": "1.0.0",
+  "main": "dist/bin/aoc.js",
+  "bin": {
+    "aoc": "dist/bin/aoc.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bin/aoc.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^18.x.x",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.x.x"
+  }
+}
