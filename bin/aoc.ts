@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import path from "path";
-import { part1, part2 } from "../src/day01"; // As a simple example
 import { readFileSync } from "fs";
 
 /**
