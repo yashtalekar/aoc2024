@@ -16,5 +16,5 @@ test("Day 1 Part 1 Example", () => {
 
 test("Day 1 Part 2 Example", () => {
   const result = part2(testInput);
-  expect(result).toBe(1234); // or any expected product
+  expect(result).toBe(31); // or any expected product
 });

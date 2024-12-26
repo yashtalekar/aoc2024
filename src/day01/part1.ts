@@ -1,6 +1,3 @@
-import { readFileSync } from "fs";
-import path from "path";
-
 export function part1(input: string): number {
   // Process input
   const lines = input.trim().split("\n");
