@@ -1,25 +1,35 @@
-import { readFileSync } from 'fs';
-import path from 'path';
+import { readFileSync } from "fs";
+import path from "path";
 
-export function part1(): number {
-  // Instead of relative to the compiled file, build it relative to the project root
-  const inputPath = path.resolve(process.cwd(), 'src/day01/input.txt');
-  const input = readFileSync(inputPath, 'utf-8');
-
+export function part1(input: string): number {
   // Process input
-  const lines = input.trim().split('\n');
+  const lines = input.trim().split("\n");
 
-  const list1: number[] = []
-  const list2: number[] = []
-  const pairs = lines.map((line) => line.split("   "))
-  console.log("pairs is: ", pairs)
+  const list1: number[] = [];
+  const list2: number[] = [];
+  const pairs = lines.map((line) => line.split("   "));
+  // console.log("pairs is: ", pairs);
   for (let i = 0; i < pairs.length; i++) {
-    list1.push(Number(pairs[0]))
-    list2.push(Number(pairs[1]))
+    list1.push(Number(pairs[i][0]));
+    list2.push(Number(pairs[i][1]));
   }
-  
 
+  list1.sort();
+  list2.sort();
 
+  // console.log("list1 and list2 are; ", list1, list2);
 
-  return lines.reduce((sum, line) => sum + Number(line), 0);
+  if (list1.length !== list2.length) {
+    throw new Error("Input lists lenght not equal!");
+  }
+  const inputListLength = list1.length;
+
+  let total = 0;
+  for (let i = 0; i < inputListLength; i++) {
+    total = total + Math.abs(list1[i] - list2[i]);
+  }
+
+  // console.log("total is: ", total);
+
+  return total;
 }
